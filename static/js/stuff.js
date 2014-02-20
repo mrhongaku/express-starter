@@ -1,8 +1,8 @@
-alert('Welcome to my stuff page!'); // edit me!
+alert('Hello World'); // edit me!
 
 // Problem 1 (Say Hello!) ---------------------------------------------------
-$('#say_hello').click(function(alert "Hello World!") {
-  // WRITE CODE HERE
+$('#say_hello').click(function() {
+  alert("Hello World!") // WRITE CODE HERE
 });
 
 
