@@ -29,8 +29,6 @@ $('#depink').click(function() {
 // Problem 4 (Greet Me) -----------------------------------------------------
 // WRITE CODE HERE
 $('#greet').click(function() {
-	var rows = $('#my_name').my_name()
-	alert('my_name')
-
+	$('#my_name').val('Hello ' + $('#my_name').val())
 
 });
