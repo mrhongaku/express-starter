@@ -40,4 +40,34 @@ $(document).ready(function() {
     context.stroke();
   })
 
+  $('#p6').click(function() {
+    context.strokeRect(250, 330, 200, 100, context.strokeStyle='green');
+  })
+
+  $('#p7').click(function() {
+    context.beginPath();
+    context.arc(300, 300, 55, 0, Math.PI*2, context.strokeStyle='red', context.fillStyle='red');
+    context.closePath();
+    context.fill();
+  })
+
+  $('#p8').click(function() {
+    context.beginPath();
+    context.strokeStyle = "blue";
+    context.fillStyle = "#FFFF00";
+    context.strokeRect(100, 100, 100, 100);
+    context.closePath();
+  })
+
+  $('#p9').click(function() {
+    for (var i = 0; i <=4; i++) {
+        context.strokeRect(50*i, 100, 50, 50)
+    }
+  })
+
+  $('#p10').click(function() {
+    for (var i = 0; i <= 99; i++) {
+        context.strokeRect(5*i, 200, 5, 5)
+    }
+  })
 });
