@@ -21,7 +21,11 @@ $(document).ready(function() {
     // Write circle drawing code here
     // Delete the alert when done
   };
-
+  var drawTriplet = function(x, y, color) {
+    drawCircle(x+25, y-75, 25, color);
+    drawCircle(x, y-50, 25, color);
+    drawCircle(x+50, y-50, 25, color);
+  };
   // Write drawTriplet function here
 
   // Challenge:
@@ -55,5 +59,20 @@ $(document).ready(function() {
     drawCircle(50, 25, 25, 'green');
     drawCircle(50, 75, 25, 'green');
     drawSquare(25, 25, 50, 'red');
+  });
+
+  $('#p6').click(function() {
+    drawTriplet(200, 200, 'green');
+  });
+
+  $('#p7').click(function() {
+    drawTriplet(300, 300, 'blue');
+  });
+
+  $('#p8').click(function() {
+    drawTriplet(200, 150, 'blue');
+    drawTriplet(300, 400, 'green');
+    drawTriplet(100, 200, 'black');
+    drawTriplet(50, 275, 'red');
   });
 });
