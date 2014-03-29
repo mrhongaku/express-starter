@@ -8,18 +8,16 @@ $(document).ready(function() {
   });
 
   var drawSquare = function(x, y, sideLen, color) {
-    alert('Drawing a square is unimplemented!');
-    context.strokeRect(x, y, sideLen, sideLen);
-    context.strokeStyle = color; 
+    context.strokeRect(x, y, sideLen, sideLen, context.strokeStyle=color);
     // Write square drawing code here
     // Delete the alerts when done
   };
 
   var drawCircle = function(x, y, radius, color) {
-    alert('Drawing a circle is unimplemented!');
     context.beginPath();
-    context.arc(x, y, radius, 0, Math.PI);
+    context.arc(x, y, radius, 0, 2*Math.PI);
     context.closePath();
+    context.stroke(context.strokeStyle=color);
     // Write circle drawing code here
     // Delete the alert when done
   };
@@ -50,4 +48,12 @@ $(document).ready(function() {
   //Write your code for p5-p11 here
   //
 
+  $('#p5').click(function() {
+    drawCircle(50, 50, 25, 'blue');
+    drawCircle(75, 50, 25, 'green');
+    drawCircle(25, 50, 25, 'green');
+    drawCircle(50, 25, 25, 'green');
+    drawCircle(50, 75, 25, 'green');
+    drawSquare(25, 25, 50, 'red');
+  });
 });
