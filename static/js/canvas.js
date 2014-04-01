@@ -70,4 +70,7 @@ $(document).ready(function() {
         context.strokeRect(5*i, 200, 5, 5)
     }
   })
+
+    }
+  })
 });
