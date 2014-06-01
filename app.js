@@ -1,6 +1,8 @@
 var express = require("express");
 var ejs = require("ejs");
 var app = express();
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('facts.db');
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -52,6 +54,22 @@ app.get('/ball', function(req, res) {
 
 app.get('/chain_reaction', function(req, res) {
   res.render('chain_reaction.html', {});
+});
+
+var allfacts = ['I love cheese', 'China is a big country', 'A young donkey is called a kid'];
+
+app.get('/fact', function(req, res) {
+  facts: allfacts
+  var item = db.get('SELECT * FROM fact_table ORDER BY RANDOM()', function(err, item) {
+  res.render('fact.html', {fact: item.fact_str});// render page here
+});
+    
+});
+
+app.get('/submit_fact', function(req, res) {
+  var newFact = req.query['fact'];
+  allfacts.push(newFact);
+  res.redirect('/fact');
 });
 
 ///////////////////////////////////////////////////////////////////////////////
