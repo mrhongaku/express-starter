@@ -27,6 +27,7 @@ $(document).ready(function() {
   var levels = [lev1, lev2, lev3, lev4, lev5, lev6, lev7, lev8, lev9];
   var curLevel = 0
   var levelText = "Level 1 - React 1 out of 5 balls"
+  var
 
 
 
@@ -130,23 +131,22 @@ $(document).ready(function() {
       context.font = "20px Corbel";
       context.fillText("reactions: " + numReacted, 450, 50);
       context.fillText(levelText, 50, 50);
-    if (reacting === true && reactions.length == 0) {
-        console.log(numReacted);
-        console.log(levels[curLevel].minReactions);
-        gameState = "menu";
-        if (numReacted >= levels[curLevel].minReactions) {
-          curLevel ++;
-          menuText = "Get ready for the next level!"
-        } else {
-          menuText = "Click to try the level again!"
-        }
-        if (curLevel === levels.length) {
-          curLevel = 0;
-          menuText = "Congratulations! You won!"
-        }
+      if (reacting === true && reactions.length == 0) {
+          console.log(numReacted);
+          console.log(levels[curLevel].minReactions);
+          gameState = "menu";
+          if (numReacted >= levels[curLevel].minReactions) {
+            curLevel ++;
+            menuText = "Get ready for the next level!"
+          } else {
+            menuText = "Click to try the level again!"
+          }
+          if (curLevel === levels.length) {
+            curLevel = 0;
+            menuText = "Congratulations! You won!"
+          }
       }
     }
-    
     requestAnimationFrame(updateGame);
   };
 
