@@ -19,7 +19,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: 'Montserrat,"Helvetica Neue",'Helvetica,Arial,sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -59,7 +59,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Roboto',sans-serif;
     background-color: #000;
 }
 
@@ -72,7 +72,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: gray;
 }
 
 .navbar-custom .nav li a {
@@ -91,7 +91,6 @@ a:focus {
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
 }
 
 .navbar-toggle:focus,
@@ -112,7 +111,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #000;
+        background-color: black;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -128,7 +127,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-bg.jpg) no-repeat top scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -143,10 +142,13 @@ a:focus {
 
 .brand-heading {
     font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: gray;
 }
 
 .intro-text {
     font-size: 18px;
+    color: gray;
 }
 
 @media(min-width:767px) {
